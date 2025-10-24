@@ -75,7 +75,7 @@ make
 matrix_calc.exe
 ```
 
-#### Windows (Visual Studio Command Prompt)
+#### Windows (Command Prompt or PowerShell)
 ```cmd
 # Alternative manual compilation
 gcc -Wall -Wextra -std=c99 -O2 *.c -o matrix_calc.exe
@@ -127,40 +127,8 @@ The calculator presents an interactive menu with the following options:
 10. **Inverse Matrix Calculator**
 11. **Matrix Power Calculator**
 
-### Example Session
-```
-     Matrix Calculator v1.2
-
- (1) Matrix Addition Calculator
- (2) Matrix Subtraction Calculator
- (3) Matrix Scalar Multiplication Calculator
- ...
-
-Enter the number of the calculator you want to use: 1
-
-Enter the size of the matrices (rows columns): 2 2
-
-Enter Matrix A:
-Enter element [1][1]: 1
-Enter element [1][2]: 2
-Enter element [2][1]: 3
-Enter element [2][2]: 4
-
-Enter Matrix B:
-Enter element [1][1]: 5
-Enter element [1][2]: 6
-Enter element [2][1]: 7
-Enter element [2][2]: 8
-
-Result Matrix (A + B):
-[  6   8 ]
-[ 10  12 ]
-
-Do you want to perform another calculation? (Y/N): N
-```
-
 ### Input Guidelines
-- **Matrix Dimensions**: Enter as "rows columns" (e.g., "3 3" for a 3×3 matrix)
+- **Matrix Dimensions**: Enter as "rows columns" (e.g., "3x3" for a 3×3 matrix)
 - **Matrix Elements**: Enter integers when prompted
 - **Fractions**: When applicable, results may be displayed as simplified fractions
 - **Navigation**: Use the menu numbers to select operations
@@ -210,26 +178,6 @@ The calculator includes robust error handling for:
 - Memory allocation failures
 - Invalid user input
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-operation`)
-3. Make your changes
-4. Test thoroughly on your platform
-5. Commit your changes (`git commit -am 'Add new matrix operation'`)
-6. Push to the branch (`git push origin feature/new-operation`)
-7. Create a Pull Request
-
-### Development Guidelines
-- Follow existing code style and naming conventions
-- Add appropriate error checking for new functions
-- Update this README if adding new features
-- Test on multiple platforms when possible
-
-## License
-
-This project is open source. Please check the repository for license details.
-
 ## Troubleshooting
 
 ### Common Issues
@@ -243,11 +191,6 @@ This project is open source. Please check the repository for license details.
 - Ensure matrix dimensions are positive integers
 - Verify you have sufficient memory for large matrices
 
-**"cls" command not found (Linux/macOS)**
-- ✅ **Fixed!** The project now uses cross-platform clear screen commands
-- Windows: Uses `cls` command
-- Linux/macOS: Uses `clear` command
-
 **Memory allocation errors**
 - Reduce matrix size for very large matrices
 - Check available system memory
@@ -257,13 +200,3 @@ This project is open source. Please check the repository for license details.
 **Linux**: Should work out of the box with most distributions
 **macOS**: Requires Xcode Command Line Tools
 **Windows**: Best compatibility with MinGW or MSYS2; may require path configuration
-
-## Version History
-
-- **v1.2**: Current version with cross-platform support
-- **v1.1**: Added fraction support and improved error handling
-- **v1.0**: Initial release with basic matrix operations
-
----
-
-*For bug reports or feature requests, please open an issue in the project repository.*

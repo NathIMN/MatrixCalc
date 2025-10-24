@@ -4,7 +4,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Cross-platform clear screen macro
 #ifdef _WIN32
     #define CLEAR_SCREEN() system("cls")
 #else
